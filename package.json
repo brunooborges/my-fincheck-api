@@ -1,8 +1,8 @@
 {
-  "name": "api",
+  "name": "my-fincheck-api",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Bruno Borges",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
