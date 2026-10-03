@@ -33,7 +33,8 @@
     "prisma": "^5.5.2",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "@nestjs/throttler": "^6"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
@@ -75,6 +76,12 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^src/(.*)$": "<rootDir>/$1"
+    },
+    "setupFiles": [
+      "<rootDir>/../test/jest-node-compat.js"
+    ]
   }
 }
