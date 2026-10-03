@@ -14,6 +14,12 @@ Set these in the Render dashboard. None of them belongs in the code or in git.
 | `PORT` | no | `3000` | Port to listen on. Render sets it for you. |
 | `TRUST_PROXY` | no | `1` | Number of proxies in front of the API, so rate limits count the visitor's real address. |
 
+## Node version
+
+Node 20.19 or newer (`engines` in `package.json`; `.node-version` pins 22 for Render). Without a
+pin Render uses an older Node, and `yarn` stops on `@nestjs/mapped-types`, which then leaves
+`@nestjs/throttler` uninstalled and the build failing on it.
+
 ## Database
 
 Create the tables once, from your machine, with the **direct** (non-pooled) Neon connection string,
